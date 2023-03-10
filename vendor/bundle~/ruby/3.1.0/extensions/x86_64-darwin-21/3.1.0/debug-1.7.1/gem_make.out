@@ -1,0 +1,17 @@
+current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+/Users/guilherme.t.silva/.rbenv/versions/3.1.0/bin/ruby -I /Users/guilherme.t.silva/.rbenv/versions/3.1.0/lib/ruby/3.1.0 -r ./siteconf20230310-8130-33wurg.rb extconf.rb
+creating Makefile
+
+current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= clean
+
+current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\=
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/debug-1.7.1/ext/debug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20230310-8130-y9ljdm/debug
