@@ -32,9 +32,9 @@ RUN bundle exec bootsnap precompile --gemfile app/ lib/
 #RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
 
 # Entrypoint prepares the database.
-COPY docker/ ./docker/
+
 COPY docker-entrypoint.sh docker-entrypoint.sh
-RUN  chmod u+x /app/docker-entrypoint.sh
+RUN  chmod u+x /rails/docker-entrypoint.sh
 
 ENTRYPOINT ["./bin/docker-entrypoint"]
 
