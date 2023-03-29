@@ -1,5 +1,5 @@
 current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
-/Users/guilherme.t.silva/.rbenv/versions/3.1.0/bin/ruby -I /Users/guilherme.t.silva/.rbenv/versions/3.1.0/lib/ruby/3.1.0 -r ./siteconf20230310-8130-ibrant.rb extconf.rb
+/Users/guilherme.t.silva/.rbenv/versions/3.1.2/bin/ruby -I /Users/guilherme.t.silva/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230329-92949-7sc7sz.rb extconf.rb
 checking for termios.h... yes
 checking for cfmakeraw() in termios.h... yes
 checking for sys/ioctl.h... yes
@@ -17,4 +17,4 @@ ld: warning: -undefined dynamic_lookup may not work with chained fixups
 
 current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/io-console-0.6.0/ext/io/console
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 console.bundle ./.gem.20230310-8130-ei0p4t/io
+/usr/bin/install -c -m 0755 console.bundle ./.gem.20230329-92949-8kmcmj/io

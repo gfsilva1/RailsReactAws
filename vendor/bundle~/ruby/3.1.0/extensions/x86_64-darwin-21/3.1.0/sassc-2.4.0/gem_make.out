@@ -1,5 +1,5 @@
 current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/sassc-2.4.0/ext
-/Users/guilherme.t.silva/.rbenv/versions/3.1.0/bin/ruby -I /Users/guilherme.t.silva/.rbenv/versions/3.1.0/lib/ruby/3.1.0 -r ./siteconf20230310-8130-d2wrv6.rb extconf.rb
+/Users/guilherme.t.silva/.rbenv/versions/3.1.2/bin/ruby -I /Users/guilherme.t.silva/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230329-92949-s1mck.rb extconf.rb
 creating Makefile
 
 current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/sassc-2.4.0/ext
@@ -78,4 +78,4 @@ ld: warning: -undefined dynamic_lookup may not work with chained fixups
 
 current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/sassc-2.4.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20230310-8130-m4pns3/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20230329-92949-zjbdk5/sassc

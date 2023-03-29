@@ -1,5 +1,5 @@
 current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/nio4r-2.5.8/ext/nio4r
-/Users/guilherme.t.silva/.rbenv/versions/3.1.0/bin/ruby -I /Users/guilherme.t.silva/.rbenv/versions/3.1.0/lib/ruby/3.1.0 -r ./siteconf20230310-8130-uzjgm5.rb extconf.rb
+/Users/guilherme.t.silva/.rbenv/versions/3.1.2/bin/ruby -I /Users/guilherme.t.silva/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230329-92949-1yj4ov.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... no
 checking for linux/io_uring.h... no
@@ -288,7 +288,7 @@ compiling selector.c
 selector.c:301:26: warning: incompatible function pointer types passing 'VALUE (*)(VALUE *)' (aka 'unsigned long (*)(unsigned long *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
         return rb_ensure(func, (VALUE)args, NIO_Selector_unlock, self);
                          ^~~~
-/Users/guilherme.t.silva/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/iterator.h:425:25: note: passing argument to parameter 'b_proc' here
+/Users/guilherme.t.silva/.rbenv/versions/3.1.2/include/ruby-3.1.0/ruby/internal/iterator.h:425:25: note: passing argument to parameter 'b_proc' here
 VALUE rb_ensure(VALUE (*b_proc)(VALUE), VALUE data1, VALUE (*e_proc)(VALUE), VALUE data2);
                         ^
 1 warning generated.
@@ -297,4 +297,4 @@ ld: warning: -undefined dynamic_lookup may not work with chained fixups
 
 current directory: /Users/guilherme.t.silva/Documents/gui/railsreact/teste/vendor/bundle~/ruby/3.1.0/gems/nio4r-2.5.8/ext/nio4r
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20230310-8130-kizb8v
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20230329-92949-hqiv1s
