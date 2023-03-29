@@ -32,7 +32,7 @@ RUN bundle exec bootsnap precompile --gemfile app/ lib/
 #RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
 
 # Entrypoint prepares the database.
-ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+ENTRYPOINT ["./docker-entrypoint"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
