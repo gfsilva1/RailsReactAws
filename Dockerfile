@@ -33,10 +33,7 @@ RUN bundle exec bootsnap precompile --gemfile app/ lib/
 
 # Entrypoint prepares the database.
 
-COPY docker-entrypoint.sh docker-entrypoint.sh
-RUN  chmod u+x /rails/docker-entrypoint.sh
-
-ENTRYPOINT ["./bin/docker-entrypoint"]
+ENTRYPOINT ["sh", "rails/bin/docker-entrypoint.sh"]
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
