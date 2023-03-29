@@ -1,22 +1,39 @@
-FROM ruby:3.1.2-alpine as base
-ARG RAILS_ENV
 
-ENV BUILD_PACKAGES="linux-headers tzdata build-base libffi-dev bash postgresql-dev curl less gcompat nodejs npm git"
-RUN apk --update --upgrade add $BUILD_PACKAGES && rm /var/cache/apk/*
+# Make sure it matches the Ruby version in .ruby-version and Gemfile
+ARG RUBY_VERSION=3.1.2
+FROM ruby:$RUBY_VERSION
 
-FROM base as step
+# Install libvips for Active Storage preview support
+RUN apt-get update -qq && \
+    apt-get install -y build-essential libvips && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
 
-RUN mkdir /app
-WORKDIR /app
+# Rails app lives here
+WORKDIR /rails
 
-COPY Gemfile /app
-COPY Gemfile.lock /app
+# Set production environment
+ENV RAILS_LOG_TO_STDOUT="1" \
+    RAILS_SERVE_STATIC_FILES="true" \
+    RAILS_ENV="production" \
+    BUNDLE_WITHOUT="development"
 
-ENV BUNDLER_VERSION=2.4.8
-ARG BUNDLE_WITHOUT
-RUN gem install bundler:${BUNDLER_VERSION} && bundle _${BUNDLER_VERSION}_ install --jobs=4
-COPY . /app
+# Install application gems
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
 
-FROM step as app
+# Copy application code
+COPY . .
 
-EXPOSE 3002
+# Precompile bootsnap code for faster boot times
+RUN bundle exec bootsnap precompile --gemfile app/ lib/
+
+# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+#RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
+
+# Entrypoint prepares the database.
+ENTRYPOINT ["/rails/bin/docker-entrypoint"]
+
+# Start the server by default, this can be overwritten at runtime
+EXPOSE 3000
+CMD ["./bin/rails", "server"]
