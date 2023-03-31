@@ -1,0 +1,9 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://SHA256:yMTBQ05Z++r0ZuveJ6S6K8BsOP1NbjVlPmceuH+ZZB8@github.com/heartcombo/simple_form.git
+	tagOpt = --no-tags
